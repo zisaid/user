@@ -1,6 +1,6 @@
 {
   "name": "@zisaid/user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,8 +16,5 @@
   },
   "homepage": "https://github.com/zisaid/user#readme",
   "description": "",
-  "dependencies": {
-    "@zisaid/mongo": "^1.0.0",
-    "@zisaid/redis": "latest"
-  }
+  "dependencies": {}
 }

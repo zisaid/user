@@ -1,6 +1,6 @@
 let crypto = require('crypto');
-let mongodb = require('@zisaid/mongo');
-let redis = require('@zisaid/redis');
+let mongodb = null;
+let redis = null;
 
 let mc = 'helena';
 let db = 'helena';
@@ -8,10 +8,12 @@ let table = 'helena_user';
 
 let user = {};
 
-user.init = function (userDb, userTable, machineCode) {
+user.init = function (userDb, userTable, machineCode, mongoServer, redisServer) {
   db = userDb;
   table = userTable;
   mc = machineCode;
+  mongodb = mongoServer;
+  redis = redisServer;
 };
 
 user.login = function (username, password, addMc = true) {
