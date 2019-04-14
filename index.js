@@ -8,12 +8,18 @@ let table = 'helena_user';
 
 let user = {};
 
-user.init = function (userDb, userTable, machineCode, mongoServer, redisServer) {
+user.group = require('./group');
+user.menu = require('./menu');
+user.role = require('./role');
+user.auth = require('./auth');
+
+user.init = function (userDb, userTable, machineCode, mongoServer, redisServer, codeServer) {
   db = userDb;
   table = userTable;
   mc = machineCode;
   mongodb = mongoServer;
   redis = redisServer;
+  user.group.init(userDb, mongoServer, codeServer);
 };
 
 user.login = function (username, password, addMc = true) {
