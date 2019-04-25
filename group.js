@@ -11,7 +11,7 @@ group.init = function (userDb, mongoServer, codeServer) {
   code = codeServer;
 };
 
-group.creat = function (userid, groupType, label, toNodeCode) {
+group.crate = function (userid, groupType, label, toNodeCode) {
   return new Promise(resolve => {
     code.onReady('group_' + groupType)
       .then(() => {

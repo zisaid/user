@@ -3,9 +3,9 @@ const group = require('./group');
 let groupType = '__auth__';
 let auth = {};
 
-auth.creat = function (userid, label, toNodeCode) {
+auth.crate = function (userid, label, toNodeCode) {
   return new Promise(resolve => {
-    group.creat(userid, groupType, label, toNodeCode)
+    group.crate(userid, groupType, label, toNodeCode)
       .then(res => {
         resolve(res);
       });

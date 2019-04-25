@@ -7,9 +7,9 @@ let groupType = '__menu__';
 let menuUser = '__administrator__';
 let menu = {};
 
-menu.creat = function (label, toNodeCode) {
+menu.crate = function (label, toNodeCode) {
   return new Promise(resolve => {
-    group.creat(menuUser, groupType, label, toNodeCode)
+    group.crate(menuUser, groupType, label, toNodeCode)
       .then(res => {
         resolve(res);
       });
